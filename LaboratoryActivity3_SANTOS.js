@@ -42,17 +42,22 @@ let rows = base_number + 2;
 showStars(rows);
 console.log("\n\n");
 
-function isPrime(n) {
-  if (n <= 1 || (n % 2 === 0 && n !== 2)) {
-    return 'is not prime';
+//problem 4
+function isPrime(n){
+  if(n<2)return `${n} is not prime`;
+  
+  for(let i = 2; i<=Math.sqrt(n); i++){
+    if(n % i === 0) return `${n} is not prime`;
   }
-  for (let i = 3; i * i <= n; i += 2) {
-    if (n % i === 0) {
-      return 'is not prime';
-    }
-  }
-  return 'is prime';
+  return `${n} is prime`;
 }
+n = base_number + 10
+console.log(isPrime(n));
 
-n = base_number + 10;
-console.log(isPrime(n)); 
+function multiplicationTable(n){
+  for(let i = 1; i<=10; i++){
+    console.log(n+'*'+i+' = '+n*i)
+  }
+}
+console.log("\n\n");
+multiplicationTable(base_number);
