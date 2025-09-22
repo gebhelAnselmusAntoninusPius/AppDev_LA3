@@ -1,7 +1,6 @@
 let base_number = 4;
 
 //problem 1: 
-
 function calculateGrade(score) {
 
     if(score >= 90 && score <= 100){
@@ -31,6 +30,7 @@ let score = base_number*10+5;
 calculateGrade(score);
 console.log("\n\n");
 
+//problem 2:
 function showStars(rows){
     for(let row = 1; row<=rows; row++){
         console.log('*'.repeat(row));
@@ -42,7 +42,7 @@ let rows = base_number + 2;
 showStars(rows);
 console.log("\n\n");
 
-//problem 4
+//problem 3:
 function isPrime(n){
   if(n<2)return `${n} is not prime`;
   
@@ -54,6 +54,7 @@ function isPrime(n){
 n = base_number + 10
 console.log(isPrime(n));
 
+//problem 4:
 function multiplicationTable(n){
   for(let i = 1; i<=10; i++){
     console.log(n+'*'+i+' = '+n*i)
